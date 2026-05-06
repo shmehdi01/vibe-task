@@ -30,7 +30,7 @@ export function TicketDetail({
 }) {
   const { julesApiKey, customPreferences } = useSettingsStore();
   const [prompt, setPrompt] = useState('');
-  const [sources, setSources] = useState<{ id: string; name: string }[]>([]);
+  const [sources, setSources] = useState<{ id: string; name: string; displayName?: string }[]>([]);
   const [selectedSource, setSelectedSource] = useState('');
   const [branch, setBranch] = useState('main');
   const [autoPR, setAutoPR] = useState(true);

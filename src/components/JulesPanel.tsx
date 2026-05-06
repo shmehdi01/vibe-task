@@ -44,6 +44,10 @@ interface Activity {
 
 interface Session {
   state: string;
+  requirePlanApproval?: boolean;
+  error?: {
+    message: string;
+  };
   outputs?: Array<{
     pullRequest?: {
       url: string;
